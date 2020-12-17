@@ -5,34 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/tab.png" type="image/x-icon">
 </head>
-<body>
+<body style="background-image:url('images/background.jpg') ;background-repeat: no-repeat;background-size: cover;">
 <div style="text-align: center;" class="container">
     <div class="row">
-        <div class="col-sm">player 1 lives(X)</div>
+        <div style="background-color: rgb(185,103,255);" class="col-sm">player 1 lives(X)</div>
 
         <div class="col-sm"></div>
 
-        <div class="col-sm">player 2 lives(O)</div>
+        <div style="background-color: rgb(185,103,255);" class="col-sm">player 2 lives(O)</div>
     </div>
     <div class="row">
-        <div class="col-sm" id="p1Lives">4</div>
+        <div style="background-color: rgb(185,103,255);" class="col-sm" id="p1Lives">4</div>
 
-        <div class="col-sm"id="winner" ></div>
+        <div style="background-color: rgb(1,205,254);" class="col-sm"id="winner" ></div>
 
-        <div class="col-sm" id="p2Lives">4</div>
+        <div style="background-color: rgb(185,103,255)
+        ;" class="col-sm" id="p2Lives">4</div>
     </div>
 
     <div class="row">
-        <div class="col-sm">wins: <p id="p1-wins"></p> </div>
+        <div style="background-color: rgb(185,103,255);" class="col-sm">wins: <p id="p1-wins"></p> </div>
 
         <div class="col-sm"></div>
 
-        <div class="col-sm">wins: <p id="p2-wins"></p></div>
+        <div style="background-color: rgb(185,103,255)
+        ;" class="col-sm">wins: <p id="p2-wins"></p></div>
     </div>
 </div>
 
-<div style="width: 15%;text-align: center;background-image: url('images/template.png');background-color: none;" class="container">
+<div style="width: 15%;text-align: center;background-color: #ff9f00;" class="container">
     <div class="row">
         <div style="border-right: 1px solid black;border-bottom: 1px black solid;" class="col" id="1-1">-</div>
         <div style="border-right: 1px solid black;border-bottom: 1px black solid;"class="col" id="1-2">-</div>
@@ -47,6 +50,11 @@
         <div style="border-right: 1px solid black;" class="col" id="3-1">-</div>
         <div style="border-right: 1px solid black;" class="col" id="3-2">-</div>
         <div class="col" id="3-3">-</div>
+    </div>
+    <div class="row">
+        <div  class="col"></div>
+        <div onclick="tic()" class="col">reset</div>
+        <div class="col" ></div>
     </div>
 
     

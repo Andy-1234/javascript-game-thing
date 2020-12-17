@@ -56,7 +56,7 @@ window.onclick = e => {
     //X  win conditions for x vertical
     setInterval(function(){ if(a1.innerHTML=="X"&&b1.innerHTML=="X"&&c1.innerHTML=="X"){
                 document.getElementById("winner").innerHTML="Round goes to player1"
-
+     //this is a reset it gets it ready for next round   it get rid of all the x's and o's and makes it X's turn again as well as taking a life from the opponent it also takes a life from the loser this is the same for all the next else if statements
         a1.innerHTML="-";
         a2.innerHTML="-";
         a3.innerHTML="-";
@@ -67,7 +67,7 @@ window.onclick = e => {
         c2.innerHTML="-";
         c3.innerHTML="-";
         turn=true;
-        p2Lives-=1
+        p2Lives-=1;
     }
     else if(a2.innerHTML=="X"&&b2.innerHTML=="X"&&c2.innerHTML=="X"){
                 document.getElementById("winner").innerHTML="Round goes to player1"
@@ -315,7 +315,36 @@ window.onclick = e => {
         p1Lives-=1
 
     }
-    
+    if(a1.innerHTML=="X" || a1.innerHTML=="O"){
+         if(a2.innerHTML=="X" || a2.innerHTML=="O"){
+             if(a3.innerHTML=="X"||a3.innerHTML=="O"){
+        if(b1.innerHTML=="X" || b1.innerHTML=="O"){ 
+            if(b2.innerHTML=="X" || b2.innerHTML=="O"){
+                if(b3.innerHTML=="X"||b3.innerHTML=="O"){
+            if(c1.innerHTML=="X" || c1.innerHTML=="O"){
+                if(c2.innerHTML=="X" || c2.innerHTML=="O"){
+                if(c3.innerHTML=="X"||c3.innerHTML=="O"){
+                a1.innerHTML="-";
+                a2.innerHTML="-";
+                a3.innerHTML="-";
+                b1.innerHTML="-";
+                b2.innerHTML="-";
+                b3.innerHTML="-";
+                c1.innerHTML="-";
+                c2.innerHTML="-";
+                c3.innerHTML="-";
+                turn=true;
+                document.getElementById("winner").innerHTML="tie no round winner"
+                }
+            }
+        }
+
+        }
+        }
+    }
+    }
+    }
+}
     //
     if(p1Lives<=0){
         document.getElementById("winner").innerHTML="Player 2 wins"
@@ -334,7 +363,7 @@ window.onclick = e => {
     document.getElementById("p2Lives").innerHTML=p2Lives;
     document.getElementById("p1-wins").innerHTML=p1Wins;
     document.getElementById("p2-wins").innerHTML=p2Wins; 
-    }, 1000);
+    }, 400);
 /*function winnerWinner(){
   
 }*/
@@ -343,9 +372,22 @@ window.onclick = e => {
 
 
 
-
+//reset button just in the case of a tie with no winner
 function tic() {
-
+    a1.innerHTML="-";
+    a2.innerHTML="-";
+    a3.innerHTML="-";
+    b1.innerHTML="-";
+    b2.innerHTML="-";
+    b3.innerHTML="-";
+    c1.innerHTML="-";
+    c2.innerHTML="-";
+    c3.innerHTML="-";
+    turn=true;
+    p1Wins=0;
+    p2Wins=0;
+    p1Lives=4;
+    p2Lives=4;
 };
 
 function tac() {
